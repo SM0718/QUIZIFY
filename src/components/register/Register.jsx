@@ -27,17 +27,18 @@ function Register() {
     }
 
   return (
-    <div className="w-full h-auto bg-[#5228f5]">
-        <div className="w-1/4 h-[400px] mx-auto flex flex-col">
+    <div className="w-full my-4 h-auto bg-[#5228f5]">
+        <div className="w-5/6 sm:w-1/3 h-auto mx-auto py-10 flex flex-col">
             <form className="my-auto flex flex-col justify-center gap-4">
+                
                 <label className='font-["Inter"]' htmlFor='name'>Name:</label>
-                <span className='border-b-2'>
-                    <input required onChange={(e) => setPlayerName(e.target.value)} className='w-full bg-transparent focus:outline-none'  id='name' type='text'/>
+                <span className='border-b-2 border-black leading-tight'>
+                    <input required onChange={(e) => setPlayerName(e.target.value)} className='w-full text-white bg-transparent focus:outline-none'  id='name' type='text'/>
                 </span>
 
                 <label className='font-["Inter"]' htmlFor='number'>Number:</label>
-                <span className='border-b-2'>
-                    <input onChange={(e) => setPlayerNumber(e.target.value)} className='w-full bg-transparent focus:outline-none'  id='number' type='text'/>
+                <span className='border-b-2 border-black'>
+                    <input onChange={(e) => setPlayerNumber(e.target.value)} className='w-full text-white bg-transparent focus:outline-none'  id='number' type='text'/>
                 </span>
                 
                 <span className="flex justify-center">

@@ -13,14 +13,14 @@ function Home() {
     <div className="w-full h-auto bg-[#5228f5] font-['Inter'] flex flex-col gap-10 text-center justify-evenly my-10">
 
         <div className=''>
-            <h1 className= "text-white text-7xl leading-normal font-medium">
+            <h1 className= "p-2 text-white text-5xl sm:text-7xl leading-normal font-medium">
                 Take Part In Our
                 <br />
                 Excellent Quiz Challenge
             </h1>
         </div>
 
-        <p className='text-white m-0 text-xl'>Engage in challenging trivia games on our quiz platform</p>
+        <p className='text-white m-0 p-2 text-xl'>Engage in challenging trivia games on our quiz platform</p>
 
         <div className='text-white mx-auto flex text-center'>
             <NavLink to="/register">
@@ -48,68 +48,64 @@ function Home() {
                 <p className='pb-8 text-[#595959]'>Experience The Fun Of Engaging Quizzes</p>
             </div> 
 
-            <div className='w-2/3 mx-auto'>
+            <div className='w-3/5 mx-auto'>
 
-                <ul className='mx-auto flex flex-wrap justify-center gap-6'>
+                <ul className='w-full mx-auto flex flex-wrap justify-center gap-4'>
 
-                    <li className='mx-auto hover:scale-105 transition-all'>
-                        <NavLink to="#">
-                            <div className='w-[485px] flex bg-white p-3.5 rounded-lg'>
+                    <li className='w-full mx-auto hover:scale-105 transition-all'>
+                        
+                            <div className='w-full flex bg-white p-3.5 rounded-lg'>
 
                                 <img className='h-[22px] w-[22px] my-2' src='./src/assets/icons8-unity-50.png'/>
 
-                                <div className='flex flex-col mx-5 text-left leading-loose font-["Inter"]'>
-                                    <h3 className='inline-block font-medium text-3xl'>Multiple Choice Questions</h3>
-                                    <p className='text-[#8b8b8b]'>Participate in Multiple Choice Questions</p>
+                                <div className='flex flex-col mx-4 text-left leading-loose font-["Inter"]'>
+                                    <h3 className='inline-block font-medium text-3xl'>MCQ Options</h3>
+                                    <p className='text-[#8b8b8b]'>Lorem ipsum dolor sit amet</p>
                                 </div>
                                 
                             </div>
-                        </NavLink>
                     </li>
 
-                    <li className='mx-auto hover:scale-105 transition-all'>
-                        <NavLink to="#">
-                            <div className='w-[485px] flex bg-white p-3.5 rounded-lg'>
+                    <li className='w-full mx-auto hover:scale-105 transition-all'>
+                        
+                            <div className='w-full flex bg-white p-3.5 rounded-lg'>
 
                                 <img className='h-[22px] w-[22px] my-2' src='./src/assets/icons8-unity-50.png'/>
 
-                                <div className='flex flex-col mx-5 text-left leading-loose font-["Inter"]'>
-                                    <h3 className='inline-block font-medium text-3xl'>Choose Difficulty Levels</h3>
-                                    <p className='text-[#8b8b8b]'>Select from a variety of difficulty levels</p>
+                                <div className='flex flex-col mx-4 text-left leading-loose font-["Inter"]'>
+                                    <h3 className='inline-block font-medium text-3xl'>Compare Scores</h3>
+                                    <p className='text-[#8b8b8b]'>Lorem ipsum dolor sit amet</p>
                                 </div>
                                 
                             </div>
-                        </NavLink>
                     </li>
 
-                    <li className='mx-auto hover:scale-105 transition-all'>
-                        <NavLink to="#">
-                            <div className='w-[485px] flex bg-white p-3.5 rounded-lg'>
+                    <li className='w-full mx-auto hover:scale-105 transition-all'>
+                        
+                            <div className='w-full flex bg-white p-3.5 rounded-lg'>
 
                                 <img className='h-[22px] w-[22px] my-2' src='./src/assets/icons8-unity-50.png'/>
 
-                                <div className='flex flex-col mx-5 text-left leading-loose font-["Inter"]'>
-                                    <h3 className='inline-block font-medium text-3xl'>Select Topics</h3>
-                                    <p className='text-[#8b8b8b]'>Choose from a variety of topics</p>
+                                <div className='flex flex-col mx-4 text-left leading-loose font-["Inter"]'>
+                                    <h3 className='inline-block font-medium text-3xl'>Use Various Names</h3>
+                                    <p className='text-[#8b8b8b]'>Lorem ipsum dolor sit amet</p>
                                 </div>
                                 
                             </div>
-                        </NavLink>
                     </li>
 
-                    <li className='mx-auto hover:scale-105 transition-all'>
-                        <NavLink to="#">
-                            <div className='w-[485px] flex bg-white p-3.5 rounded-lg overflow-hidden'>
+                    <li className='w-full mx-auto hover:scale-105 transition-all'>
+                        
+                            <div className='w-full flex bg-white p-3.5 rounded-lg overflow-hidden'>
 
                                 <img className='h-[22px] w-[22px] my-2' src='./src/assets/icons8-unity-50.png'/>
 
-                                <div className='flex flex-col mx-5 text-left leading-loose font-["Inter"]'>
-                                    <h3 className='inline-block font-medium text-3xl'>Compete With Your Friends</h3>
-                                    <p className='text-[#8b8b8b]'>Beat your friends with your knoeledge</p>
+                                <div className='flex flex-col mx-4 text-left leading-loose font-["Inter"]'>
+                                    <h3 className='inline-block font-medium text-3xl'>Responsive designs</h3>
+                                    <p className='text-[#8b8b8b]'>Lorem ipsum dolor sit amet</p>
                                 </div>
                                 
                             </div>
-                        </NavLink>
                     </li>
 
                 </ul>

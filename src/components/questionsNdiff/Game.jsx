@@ -74,9 +74,9 @@ function Game({ difficulty }) {
   
 
   return (
-    <div className='w-full h-full bg-[#5228f5] font-["Inter"] flex flex-col text-center justify-evenly'>
+    <div className='w-full h-full my-4 bg-[#5228f5] font-["Inter"] flex flex-col text-center'>
       {data && currentQuestionIndex < data.length && 
-              (<div className='w-5/6 mx-auto pb-8 h-full bg-[#5228f5]  flex flex-col justify-evenly text-justify font-["Inter"]' key={currentQuestionIndex}>
+              (<div className='w-5/6 mx-auto pb-8 h-full bg-[#5228f5] flex flex-col justify-evenly font-["Inter"]' key={currentQuestionIndex}>
                  
 
               <div className='h-full text-white mx-auto flex flex-col text-justify pb-8'>
@@ -85,9 +85,9 @@ function Game({ difficulty }) {
 
               {
     (shuffledArray.map((answer, i) => (
-      <span className='w-auto h-full mx-auto my-4' key={i}>
+      <span className='w-full sm:w-[400px] h-full mx-auto text-center my-4' key={i}>
         <button
-          className={`w-[400px] mx-auto p-4 rounded-full text-white font-medium font-Inter
+          className={`w-full mx-auto p-4 rounded-full text-white font-medium font-Inter
           hover:scale-105 ${selectedAnswer === answer ? 'bg-green-500' : 'bg-[#291477]'}`}
           id={currentQuestionIndex}
           value={answer}
@@ -107,7 +107,7 @@ function Game({ difficulty }) {
           
           {currentQuestionIndex === data.length - 1 ? (
     <Button
-      className='w-[200px] ml-auto p-4 rounded-full bg-[#291477] text-white font-medium font-["Inter"] hover:scale-105'
+      className='w-[200px] sm:ml-auto p-4 rounded-full bg-[#291477] text-white font-medium font-["Inter"] hover:scale-105'
       onClick={() => {
         verifyAnswer();
         handelResult();
@@ -117,7 +117,7 @@ function Game({ difficulty }) {
     </Button>
 ) : (
   <Button
-    className='w-[200px] ml-auto p-4 rounded-full bg-[#291477] text-white font-medium font-["Inter"] hover:scale-105'
+    className='w-[200px] mx-auto sm:ml-auto p-4 rounded-full bg-[#291477] text-white font-medium font-["Inter"] hover:scale-105'
     onClick={() => {
       verifyAnswer();
       handleNextQuestion();

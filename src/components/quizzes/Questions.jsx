@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import Difficulty from '../questionsNdiff/Difficulty';
 import Game from '../questionsNdiff/Game';
 

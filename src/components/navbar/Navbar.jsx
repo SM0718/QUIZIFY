@@ -27,10 +27,10 @@ function Navbar() {
   return (
 
     <div className='h-[120px] bg-[#5228f5] p-6 m-0 '>
-        <div className='w-4/5 flex justify-between px-8 py-2 mx-auto my-auto bg-white rounded-full'>
+        <div className='w-4/5 flex flex-col sm:flex-row sm:justify-between justify-center px-8 py-2 mx-auto my-auto bg-white sm:rounded-full rounded-lg'>
 
-        <div className='my-auto'>
-            <h1 className="font-['Lato'] font-medium text-4xl cursor-pointer" onClick={() => navigate("/")}>QUIZIFY</h1>
+        <div className='my-auto text-center pb-4 sm:pb-0'>
+            <h1 className="font-['Lato'] font-medium text-3xl sm:text-4xl cursor-pointer" onClick={() => navigate("/")}>QUIZIFY</h1>
         </div>
 
         <div className='my-auto hidden md:flex'>
@@ -51,7 +51,7 @@ function Navbar() {
             </ul>
         </div>
 
-        <div className='w-full mx-4 flex justify-end md:hidden bg-none'>
+        <div className='w-full mx-auto flex justify-end md:hidden bg-none'>
             <select className='p-2 text-center block hover:border-[#5228f5] rounded-xl appearance-none border w-full leading-tight focus:outline-none
              focus:border-[#5228f5] focus:shadow-outline-blue' onChange={(e) => navigate(e.target.value)}
               value={window.location.pathname}>

@@ -11,7 +11,7 @@ function Footer() {
         <div className='p-8'>
             <h1 className="pb-6 font-['Lato'] font-medium text-4xl text-white cursor-pointer" onClick={() => navigate("/")}>QUIZIFY</h1>
             <div>
-                <ul className='flex gap-14 text-white'>
+                <ul className='flex flex-col sm:flex-row gap-10 sm:gap-14 text-white'>
 
                 <li>
                     <NavLink to='/' className={({isActive}) => `${isActive ? "text-blue-700 font-bold" : "text-white"}  font-['Inter'] hover:text-blue-700`}>
