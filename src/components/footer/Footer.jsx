@@ -50,17 +50,17 @@ function Footer() {
 
                 <li>
                    <Link to='https://www.instagram.com/sagnix__/'>
-                    <img className='w-[22px] h-[22px]' src='./src/assets/instagram.png'/>
+                    <img className='w-[22px] h-[22px]' src='/instagram.png' alt='Instagram'/>
                 </Link> 
                 </li>
                 
 
                 <Link to='https://www.linkedin.com/in/sagnik-majumder-bbbb96200/'>
-                    <img className='w-[22px] h-[22px]' src='./src/assets/linkedin.png'/>
+                    <img className='w-[22px] h-[22px]' src='/linkedin.png' alt='Linkdin'/>
                 </Link>
 
                 <Link to='https://github.com/SM0718'>
-                    <img className='w-[22px] h-[22px]' src='./src/assets/social.png'/>
+                    <img className='w-[22px] h-[22px]' src='/social.png' alt='Github'/>
                 </Link>
             </ul>
             

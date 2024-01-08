@@ -32,7 +32,7 @@ function Results() {
       ))):
       (<div className='w-full h-auto flex justify-center bg-[#5228f5]'>
         <div className='w-[500px] h-auto flex flex-col justify-between text-center rounded-xl p-8 bg-white text-black'>
-          <img className='w-auto h-1/2 mx-auto' src='./src/assets/playNow.png'/>
+          <img className='w-auto h-1/2 mx-auto' src='/playNow.png' alt='Play Now Image'/>
           <span className='p-6'>
             <h1 className='text-2xl font-["Inter"] p-4'>No Scores To Display</h1>
             <h1 className='text-2xl font-["Inter"] p-4'>Play some games now</h1>

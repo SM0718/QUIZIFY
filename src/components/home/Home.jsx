@@ -56,7 +56,7 @@ function Home() {
                         
                             <div className='w-full flex bg-white p-3.5 rounded-lg'>
 
-                                <img className='h-[22px] w-[22px] my-2' src='./src/assets/icons8-unity-50.png'/>
+                                <img className='h-[22px] w-[22px] my-2' src='/icons8-unity-50.png'/>
 
                                 <div className='flex flex-col mx-4 text-left leading-loose font-["Inter"]'>
                                     <h3 className='inline-block font-medium text-3xl'>MCQ Options</h3>
@@ -70,7 +70,7 @@ function Home() {
                         
                             <div className='w-full flex bg-white p-3.5 rounded-lg'>
 
-                                <img className='h-[22px] w-[22px] my-2' src='./src/assets/icons8-unity-50.png'/>
+                                <img className='h-[22px] w-[22px] my-2' src='/icons8-unity-50.png'/>
 
                                 <div className='flex flex-col mx-4 text-left leading-loose font-["Inter"]'>
                                     <h3 className='inline-block font-medium text-3xl'>Compare Scores</h3>
@@ -84,7 +84,7 @@ function Home() {
                         
                             <div className='w-full flex bg-white p-3.5 rounded-lg'>
 
-                                <img className='h-[22px] w-[22px] my-2' src='./src/assets/icons8-unity-50.png'/>
+                                <img className='h-[22px] w-[22px] my-2' src='/icons8-unity-50.png'/>
 
                                 <div className='flex flex-col mx-4 text-left leading-loose font-["Inter"]'>
                                     <h3 className='inline-block font-medium text-3xl'>Use Various Names</h3>
@@ -98,7 +98,7 @@ function Home() {
                         
                             <div className='w-full flex bg-white p-3.5 rounded-lg overflow-hidden'>
 
-                                <img className='h-[22px] w-[22px] my-2' src='./src/assets/icons8-unity-50.png'/>
+                                <img className='h-[22px] w-[22px] my-2' src='/icons8-unity-50.png'/>
 
                                 <div className='flex flex-col mx-4 text-left leading-loose font-["Inter"]'>
                                     <h3 className='inline-block font-medium text-3xl'>Responsive designs</h3>

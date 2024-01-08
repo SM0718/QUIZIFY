@@ -3,11 +3,11 @@ import React from 'react'
 function Img({score}) {
   if(score <= 5){
     return(
-        <img className='w-full animate-[zoomIn_1s_ease-in-out]' src='./src/assets/fail.jpg'/>
+        <img className='w-full animate-[zoomIn_1s_ease-in-out]' src='/fail.jpg' alt='Fail Image'/>
     )
   } else {
     return(
-        <img className='w-full animate-[zoomIn_1s_ease-in-out]' src='./src/assets/passed.jpg'/>
+        <img className='w-full animate-[zoomIn_1s_ease-in-out]' src='/passed.jpg' alt='Pass Image'/>
     )
   }
 }
