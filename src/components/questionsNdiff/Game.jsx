@@ -107,7 +107,7 @@ function Game({ difficulty }) {
           
           {currentQuestionIndex === data.length - 1 ? (
     <Button
-      className='w-[200px] sm:ml-auto p-4 rounded-full bg-[#291477] text-white font-medium font-["Inter"] hover:scale-105'
+      className='w-[200px] mx-auto sm:ml-auto p-4 rounded-full bg-[#291477] text-white font-medium font-["Inter"] hover:scale-105'
       onClick={() => {
         verifyAnswer();
         handelResult();
