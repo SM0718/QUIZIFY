@@ -44,7 +44,7 @@ function Footer() {
 
         <div className='w-5/6 py-8 text-white flex flex-row justify-between'>
 
-            <p>&copy;{currentDate.getFullYear()}, QUIZIFY PVT LTD</p>
+            <p>&copy;{currentDate.getFullYear()}, SAGNIK MAJUMDER</p>
 
             <ul className='w-[150px] flex justify-evenly'>
 
