@@ -6,8 +6,8 @@ function About() {
     <div className="w-full h-auto bg-[#5228f5] font-['Inter'] flex flex-col gap-10 text-center justify-evenly my-10">
 
         <div className=''>
-            <h1 className= "text-white text-6xl sm:text-7xl leading-normal font-medium">
-                This is an Practice Project
+            <h1 className= "text-white text-6xl sm:text-7xl leading-relaxed font-medium">
+                This is a Practice Project
                 <br />
                 Using The Tech Stack Below
             </h1>
