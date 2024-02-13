@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 function Home() {
 
-   
+   const authStatus = useSelector((state) => state.status)
 
   return (
     <>
@@ -23,7 +24,7 @@ function Home() {
         <p className='text-white m-0 p-2 text-xl'>Engage in challenging trivia games on our quiz platform</p>
 
         <div className='text-white mx-auto flex text-center'>
-            <NavLink to="/register">
+            <NavLink to={authStatus? "/quiz" : "/login"}>
                 <button className="m-1 p-4 rounded-full bg-[#291477] text-white font-medium font-['Inter'] hover:scale-105">
                             Getting Started
                 </button>

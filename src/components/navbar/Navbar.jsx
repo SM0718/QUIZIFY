@@ -1,9 +1,34 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink, useNavigate, useParams } from 'react-router-dom'
-import Button from '../button/Button'
+import { NavLink, useNavigate } from 'react-router-dom'
+import Button from '../Button'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../../app/forum/playerSlicer'
+import authService from '../../appwrite/auth'
 
 function Navbar() {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const status = useSelector((state) => state.status)
+    const[authStatus, setAuthStatus] = useState(status)
+    
+    const logoutHandler = () => {
+        authService.logout().then(() => {
+            dispatch(logout())
+        })
+    }
+
+    const handelClick = (item) => {
+        if(item.name !== "Logout") {
+            navigate(item.slug)
+        } else {
+            logoutHandler()
+        }
+    }
+    
+    useEffect(() => {
+        setAuthStatus(status);
+    }, [status]);
+
     const navbarItems = [
         {
             name: "Home",
@@ -11,17 +36,37 @@ function Navbar() {
         },
         {
             name: "Quiz",
-            slug: "/register"
+            slug: authStatus? "/quiz" : "/register"
         },
         {
             name: "About",
             slug: "/about"
         },
         {
-            name: "Results",
-            slug: "/results"
-        }
+            name: "Leaderboard",
+            slug: "/leaderboard"
+        },
     ]
+     
+    const buttons = [
+        {
+            name: "Register",
+            slug: "/register",
+            active: !authStatus
+        },
+        {
+            name: "Login",
+            slug: "/login",
+            active: !authStatus
+        },
+        {
+            name: "Logout",
+            slug: "",
+            active: authStatus
+        },
+    ]
+        
+    
 
 
   return (
@@ -51,31 +96,19 @@ function Navbar() {
             </ul>
         </div>
 
-        <div className='w-full mx-auto flex justify-end md:hidden bg-none'>
-            <select className='p-2 text-center block hover:border-[#5228f5] rounded-xl appearance-none border w-full leading-tight focus:outline-none
-             focus:border-[#5228f5] focus:shadow-outline-blue' onChange={(e) => navigate(e.target.value)}
-              value={window.location.pathname}>
+        <div className='my-auto flex gap-2'>
             {
-                    navbarItems.map((items) => {
-                        return (
-                    <option className='pointer-events-none absolute inset-y-0 right-0 flex items-center px-2' key={items.slug} value={items.slug}>
-                        {items.name}
-                </option>
-                    )})
-                }
-                <option className='pointer-events-none absolute inset-y-0 right-0 flex items-center px-2' key='/register' value='/register'>
-                        Register
-                </option>
-            </select>
-        </div>
-
-        <div className='my-auto'>
-                    <NavLink to='/register'>
-                         <Button className="w-[110px] m-1 p-2 lg:flex justify-center hidden rounded-full bg-[#291477] text-white hover:bg-white
-                         hover:text-black hover:outline hover:outline-2 hover:outline-black font-bold font-['Inter']">Register
-                            
-                         </Button>
-                    </NavLink>
+                buttons.map((item) => (
+                    
+                    item.active? <Button
+                    key={item.name} 
+                    onClick={() => handelClick(item)}
+                    className={"bg-[#5228f5] mx-auto p-2 rounded-2xl text-white"}>
+                        {item.name}
+                    </Button> : null
+                    
+                ))
+            }     
         </div>
 
 

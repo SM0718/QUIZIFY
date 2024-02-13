@@ -11,6 +11,8 @@ import {store} from './app/store'
 import Register from './components/register/Register.jsx'
 import Results from './components/results/Results.jsx'
 import About from './components/about/About.jsx'
+import Login from './components/Login.jsx'
+import Leaderboard from './components/Leaderboard.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +23,8 @@ const router = createBrowserRouter(
       <Route path='about' element={<About />}/>
       <Route path='register' element={<Register />} />
       <Route path='results' element={<Results />} />
+      <Route path='login' element={<Login />} />
+      <Route path='leaderboard' element={<Leaderboard />} />
     </Route>
   ))
 

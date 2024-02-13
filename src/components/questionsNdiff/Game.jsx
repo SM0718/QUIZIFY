@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Button from '../button/Button'
-import { useDispatch } from 'react-redux'
-import { updatePlayerScore } from '../../app/forum/playerSlicer'
+import { useDispatch, useSelector } from 'react-redux'
+import authService from '../../appwrite/auth';
+import appwriteService from '../../appwrite/config';
 
 
 function Game({ difficulty }) {
@@ -15,7 +16,29 @@ function Game({ difficulty }) {
   const [selectedAnswer, setSelectedAnswer] = useState([]);
   const [shuffledArray, setShulffedArray] = useState([])
   const navigate = useNavigate()
+  const authStatus = useSelector((state) => state.status)
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    if(!authStatus){
+      navigate("/login")
+    }
+  })
+
+
+  const registerScoreDetails = async() => {
+    try {
+      const user = await authService.getCurrentUser()
+      if(user) {
+        const data = await appwriteService.createPlayerScoreInfo({playerName: user.name, playerEmail: user.email, playerScore: playerScore.toString()})
+        if(data) {
+          navigate('/results');
+        }
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   useEffect(() => {
     if (difficulty) {
@@ -67,8 +90,7 @@ function Game({ difficulty }) {
   }
 
   const handelResult = () => {
-    dispatch(updatePlayerScore({playerScore}));
-    navigate('/results');
+    registerScoreDetails()
   }
   
   

@@ -13,7 +13,7 @@ function Quiz() {
 
             <h1 className='text-white m-0 pb-8 text-4xl'>Choose A Topic</h1>
 
-            <ul className='w-full h-auto flex flex-col lg:flex-row flex-wrap justify-evenly gap-4'>
+            <ul className='w-full h-auto flex flex-col lg:flex-row flex-wrap justify-center gap-4'>
 
             {
 

@@ -1,36 +1,24 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    playerInfos: []
+    status: false,
 }
 
 export const playerInfoSlice = createSlice({
     name: 'playerInfo',
     initialState,
     reducers: {
-        addPlayerInfo: (state, action) => {
-            const info = {
-                playerId: nanoid(),
-                playerName: action.payload.playerName,
-                playerNumber: action.payload.playerNumber,
-            }
-                state.playerInfos.push(info)
+        login: (state) => {
+            state.status = true;
         },
-
-        removePlayerInfo: (state, action) => {
-            state.playerInfos = state.playerInfos.filter((infos) => infos.playerId !== action.payload)
-        },
-
-        updatePlayerScore: (state,action) => {
-            const playerScore = action.payload.playerScore
-            const lastIndex = state.playerInfos.length-1
-            state.playerInfos[lastIndex].playerScore = playerScore
-
+        logout: (state) => {
+            state.status = false;
         },
     }
 })
 
 
 
-export const {addPlayerInfo, removePlayerInfo, updatePlayerScore} = playerInfoSlice.actions
+
+export const {login, logout} = playerInfoSlice.actions
 export default playerInfoSlice.reducer

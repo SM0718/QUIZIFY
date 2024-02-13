@@ -1,12 +1,14 @@
-import React from 'react'
 
-function InputField({children, type, label, className, ...props}) {
+import React, {useId} from 'react'
+
+const InputField = React.forwardRef(function Input({label, type, className, labelStyle, required, ...props}, ref) {
+  const id = useId()
   return (
-    <div>
-        <label htmlFor={label}>{children}</label>
-        <input type={type} id={label} {...props}/>
-    </div>
+    <>
+        {label && <label className={labelStyle} htmlFor={id}>{label} {required && <span className="text-red-600">*</span>}</label>}
+        <input className={`${className}`} type={type} id={id} ref={ref} {...props}/>
+    </>
   )
-}
+})
 
 export default InputField

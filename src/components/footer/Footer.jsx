@@ -1,9 +1,30 @@
 import React from 'react'
 import { NavLink, Link, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 function Footer() {
     const navigate = useNavigate()
-    var currentDate = new Date();
+    let currentDate = new Date();
+    const status = useSelector((state) => state.status)
+
+    const footerItems = [
+        {
+            name: "Home",
+            slug: "/"
+        },
+        {
+            name: "Quiz",
+            slug: status? "/quiz" : "/register"
+        },
+        {
+            name: "About",
+            slug: "/about"
+        },
+        {
+            name: "Leaderboard",
+            slug: "/leaderboard"
+        },
+    ]
 
   return (
     <div className='w-full h-full flex flex-col items-center text-center bg-black'>
@@ -13,29 +34,17 @@ function Footer() {
             <div>
                 <ul className='flex flex-col sm:flex-row gap-10 sm:gap-14 text-white'>
 
-                <li>
-                    <NavLink to='/' className={({isActive}) => `${isActive ? "text-blue-700 font-bold" : "text-white"}  font-['Inter'] hover:text-blue-700`}>
-                        Home
+                {
+                    footerItems.map((items) => {
+                        return (
+                    <li key={items.name}>
+                    <NavLink to={items.slug} className={({isActive}) => `${isActive ? "text-blue-700 font-bold" : "text-white"} 
+                    font-['Inter'] hover:text-blue-700`}>
+                        {items.name}
                     </NavLink>
                 </li>
-
-                <li>
-                    <NavLink to='/quiz' className={({isActive}) => `${isActive ? "text-blue-700 font-bold" : "text-white"} font-['Inter'] hover:text-blue-700`}>
-                        Quiz
-                    </NavLink>
-                </li>
-
-                <li>
-                    <NavLink to='/about' className={({isActive}) => `${isActive ? "text-blue-700 font-bold" : "text-white"} font-['Inter'] hover:text-blue-700`}>
-                        About
-                    </NavLink>
-                </li>
-
-                <li>
-                    <NavLink to='/results' className={({isActive}) => `${isActive ? "text-blue-700 font-bold" : "text-white"} font-['Inter'] hover:text-blue-700`}>
-                        Score
-                    </NavLink>
-                </li>
+                    )})
+                }
                 </ul>
             </div>
         </div>
