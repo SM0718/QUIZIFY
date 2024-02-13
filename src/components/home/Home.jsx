@@ -14,7 +14,7 @@ function Home() {
     <div className="w-full h-auto bg-[#5228f5] font-['Inter'] flex flex-col gap-10 text-center justify-evenly my-10">
 
         <div className=''>
-            <h1 className= "p-2 text-white text-5xl sm:text-7xl leading-normal font-medium">
+            <h1 className= "p-2 text-white text-5xl sm:text-7xl leading-relaxed font-medium">
                 Take Part In Our
                 <br />
                 Excellent Quiz Challenge
