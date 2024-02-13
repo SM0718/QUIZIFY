@@ -22,7 +22,6 @@ function Results() {
     try {
       const user = await authService.getCurrentUser()
       if(user) {
-        console.log(user.status, currentDate)
         const userData = await appwriteService.getUserData(user.email)
         if(userData) {
           setData(userData.documents)
