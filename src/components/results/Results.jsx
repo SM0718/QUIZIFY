@@ -13,12 +13,6 @@ function Results() {
   var currentDate = new Date();
   const authStatus = useSelector((state) => state.status)
 
-  // useEffect(() => {
-  //   if(!authStatus){
-  //     navigate("/login")
-  //   }
-  // }, [authStatus])
-
   useEffect(() => {
     getScores()
   },)
@@ -31,7 +25,6 @@ function Results() {
         console.log(user.status, currentDate)
         const userData = await appwriteService.getUserData(user.email)
         if(userData) {
-          console.log(userData)
           setData(userData.documents)
         } else {
           navigate("/login")
